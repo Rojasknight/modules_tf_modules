@@ -5,9 +5,7 @@ provider "aws" {
 
 resource "aws_security_group" "ssh_connection" {
   name = var.sg_name
-  
-  /*dynamic: se usa para iterar sobre un elemento de un recurso, para hacerlo escalable, 
-  se envia una lista de reglas de ingreso*/
+ 
   dynamic "ingress" {
     for_each = var.ingress_rules
     content {
