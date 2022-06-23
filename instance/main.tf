@@ -1,5 +1,3 @@
-/*Modulos locales: Crear una instancia con docker a partir de una AMI y 
-crearle un Security Group para que se pueda comun*/
 
 provider "aws" {
   region = "us-west-2"
